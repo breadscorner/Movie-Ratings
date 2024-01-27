@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-4sK4E3Wk.css",
+      "PackagePath": "staticwebassets/assets/index-4sK4E3Wk.css"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-4u6Fy7PY.js",
+      "PackagePath": "staticwebassets/assets/index-4u6Fy7PY.js"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/vite.svg",
+      "PackagePath": "staticwebassets/vite.svg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.movies.props",
+      "PackagePath": "build\\movies.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.movies.props",
+      "PackagePath": "buildMultiTargeting\\movies.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.movies.props",
+      "PackagePath": "buildTransitive\\movies.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.movies.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

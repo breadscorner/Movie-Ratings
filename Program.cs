@@ -35,6 +35,10 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapFallbackToFile("index.html");
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

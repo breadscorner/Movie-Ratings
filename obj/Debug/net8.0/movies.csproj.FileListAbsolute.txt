@@ -106,3 +106,8 @@
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/movies.MvcApplicationPartsAssemblyInfo.cs
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/package-lock.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/package.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/tsconfig.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/tsconfig.node.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/movies.staticwebassets.runtime.json
