@@ -1,25 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
 
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
-
 DotNetEnv.Env.Load();
 
-// Retrieve environment variables
 var PGHOST = Environment.GetEnvironmentVariable("PGHOST");
 var PGDATABASE = Environment.GetEnvironmentVariable("PGDATABASE");
 var PGUSER = Environment.GetEnvironmentVariable("PGUSER");
 var PGPASSWORD = Environment.GetEnvironmentVariable("PGPASSWORD");
 
-// Build connection string
 var connectionString = $"Host={PGHOST};Database={PGDATABASE};Username={PGUSER};Password={PGPASSWORD}";
 
-// Add services to the container.
-var services = new ServiceCollection();
+var builder = WebApplication.CreateBuilder(args);
 
-// Add database context
-services.AddDbContext<DatabaseContext>(
+builder.Services.AddDbContext<DatabaseContext>(
     opt =>
     {
       opt.UseNpgsql(connectionString);
@@ -33,6 +26,21 @@ services.AddDbContext<DatabaseContext>(
     }
 );
 
+// builder.Services.AddControllers();
+
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
+
 app.MapGet("/", () => "Hello World!");
+
+// app.MapControllers();
 
 app.Run();
