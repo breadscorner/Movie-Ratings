@@ -30,3 +30,6 @@
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/movies.pdb
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/movies.genruntimeconfig.cache
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/ref/movies.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/movies.sourcelink.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/DotNetEnv.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Sprache.dll
