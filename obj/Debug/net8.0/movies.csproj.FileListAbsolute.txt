@@ -100,3 +100,9 @@
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/obj/Debug/net8.0/movies.MvcApplicationPartsAssemblyInfo.cs

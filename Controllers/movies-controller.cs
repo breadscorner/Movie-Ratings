@@ -20,15 +20,15 @@ public class MoviesController : ControllerBase
   {
     if (starRating.HasValue)
     {
-      return await _context.MovieList.Where(t => t.rating >= starRating).ToListAsync();
+      return await _context.MovieLists.Where(t => t.rating >= starRating).ToListAsync();
     }
-    return await _context.MovieList.ToListAsync();
+    return await _context.MovieLists.ToListAsync();
   }
 
   [HttpGet("{id}")]
   public async Task<ActionResult<MovieList>> GetMovieItem(int id)
   {
-    var movieItem = await _context.MovieList.FindAsync(id);
+    var movieItem = await _context.MovieLists.FindAsync(id);
 
     if (movieItem == null)
     {
@@ -41,7 +41,7 @@ public class MoviesController : ControllerBase
   [HttpPost]
   public async Task<ActionResult<MovieList>> PostMovieItem(MovieList movie)
   {
-    _context.MovieList.Add(movie);
+    _context.MovieLists.Add(movie);
     await _context.SaveChangesAsync();
 
     return CreatedAtAction(nameof(GetMovieItem), new { id = movie.Id }, movie);
@@ -64,13 +64,13 @@ public class MoviesController : ControllerBase
   [HttpDelete("{id}")]
   public async Task<IActionResult> DeleteTodoItem(int id)
   {
-    var movieItem = await _context.MovieList.FindAsync(id);
+    var movieItem = await _context.MovieLists.FindAsync(id);
     if (movieItem == null)
     {
       return NotFound();
     }
 
-    _context.MovieList.Remove(movieItem);
+    _context.MovieLists.Remove(movieItem);
     await _context.SaveChangesAsync();
 
     return NoContent();

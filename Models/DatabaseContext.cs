@@ -9,7 +9,7 @@ namespace movies.Models
     {
     }
 
-    public DbSet<MovieList> MovieList => Set<MovieList>();
+    public DbSet<MovieList> MovieLists => Set<MovieList>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

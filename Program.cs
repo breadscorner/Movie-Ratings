@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
+using movies.Controllers;
+using Microsoft.AspNetCore.OpenApi;
 
 DotNetEnv.Env.Load();
 
@@ -26,21 +28,21 @@ builder.Services.AddDbContext<DatabaseContext>(
     }
 );
 
-// builder.Services.AddControllers();
+builder.Services.AddControllers();
 
-// builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
-// }
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.MapGet("/", () => "Hello World!");
 
-// app.MapControllers();
+app.MapControllers();
 
 app.Run();
