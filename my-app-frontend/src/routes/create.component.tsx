@@ -12,42 +12,10 @@ type Movie = {
 
 export const component = function Home() {
 
-    // const [movie, setMovie] = useState<Movie | null>(null);
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState(0);
     const [year, setYear] = useState(0);
 
-    // async function handleSubmit(e: React.FormEvent) {
-    //     e.preventDefault()
-    //     const response = await fetch("/api/Movies");
-    //     const data = await response.json();
-    //     console.log(data.length)
-
-    //     const result = await fetch("/api/Movies", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify({ id: data.length + 1, title: title, rating: rating, year: year }),
-    //     })
-
-
-    //     let movieId = data.length + 1
-    //     let movieTitle = data.length + 1
-    //     let movieRating = data.length + 1
-    //     let movieYear = data.length + 1
-
-    //     setMovie({
-    //         id: movieId,
-    //         title: movieTitle,
-    //         year: movieRating,
-    //         rating: movieYear,
-    //         createdAt: ""
-    //     })
-
-    //     const databody = result.json()
-    //     console.log(databody)
-    // }
 const { error, isPending, mutateAsync } = useMutation({
         mutationKey: ["movies"],
         mutationFn: async ({ title, year, rating }: Movie) => {
