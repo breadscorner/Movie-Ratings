@@ -1,7 +1,7 @@
 import {
   QueryClient,
   QueryClientProvider,
-} from "@tanstack/react-query";
+} from '@tanstack/react-query'
 
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
