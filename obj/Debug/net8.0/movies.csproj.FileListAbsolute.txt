@@ -111,3 +111,5 @@
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/tsconfig.json
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/my-app-frontend/tsconfig.node.json
 /Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/movies.staticwebassets.runtime.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/package-lock.json
+/Users/brettgill/Documents/brett-projects/movie-ratings/movies/bin/Debug/net8.0/package.json
