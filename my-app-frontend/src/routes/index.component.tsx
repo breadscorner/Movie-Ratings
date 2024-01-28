@@ -1,5 +1,3 @@
-// routes/IndexComponent.tsx
-// import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import { fetchMovies } from "../network";
