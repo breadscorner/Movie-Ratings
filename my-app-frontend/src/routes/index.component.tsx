@@ -1,5 +1,5 @@
+// routes/IndexComponent.tsx
 import { useEffect, useState } from "react";
-import "../App.css";
 
 type Movie = {
   id: number;
@@ -9,7 +9,7 @@ type Movie = {
   createdAt: string;
 };
 
-export default function App() {
+export const component = function CreatePage() {
   const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ export default function App() {
       ))}
     </>
   );
-}
+};

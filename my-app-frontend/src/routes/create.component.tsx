@@ -9,8 +9,8 @@ type Movie = {
     createdAt: string;
 };
 
-export default function App() {
-
+export const component = function Home() {
+  
     const [movie, setMovie] = useState<Movie | null>(null);
     const [title, setTitle] = useState("");
     const [rating, setRating] = useState(0);

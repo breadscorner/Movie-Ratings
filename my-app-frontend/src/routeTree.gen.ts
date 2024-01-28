@@ -16,20 +16,20 @@ const IndexComponentImport = createFileRoute('/')()
 const CreateComponentRoute = CreateComponentImport.update({
   path: '/create',
   getParentRoute: () => rootRoute,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as any).update({
   component: lazyRouteComponent(
     () => import('./routes/create.component'),
+    'component',
   ),
 })
 
 const IndexComponentRoute = IndexComponentImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 } as any).update({
   component: lazyRouteComponent(
     () => import('./routes/index.component'),
+    'component',
   ),
 })
 
