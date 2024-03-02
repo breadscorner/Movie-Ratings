@@ -1,18 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
-using movies.Controllers;
-using Microsoft.AspNetCore.OpenApi;
+
+var builder = WebApplication.CreateBuilder(args);
 
 DotNetEnv.Env.Load();
 
 var PGHOST = Environment.GetEnvironmentVariable("PGHOST");
+if (string.IsNullOrEmpty(PGHOST))
+{
+    throw new Exception("PGHOST environment variable is not set or is empty.");
+}
+
 var PGDATABASE = Environment.GetEnvironmentVariable("PGDATABASE");
 var PGUSER = Environment.GetEnvironmentVariable("PGUSER");
 var PGPASSWORD = Environment.GetEnvironmentVariable("PGPASSWORD");
 
-var connectionString = $"Host={PGHOST};Database={PGDATABASE};Username={PGUSER};Password={PGPASSWORD}";
 
-var builder = WebApplication.CreateBuilder(args);
+var connectionString = $"Host={PGHOST};Database={PGDATABASE};Username={PGUSER};Password={PGPASSWORD}";
 
 builder.Services.AddDbContext<DatabaseContext>(
     opt =>
@@ -35,18 +39,18 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
-app.MapFallbackToFile("index.html");
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.MapGet("/", () => "Hello World!");
-
 app.MapControllers();
+
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapGet("/", () => "Hello World!");
+app.MapFallbackToFile("index.html");
 
 app.Run();

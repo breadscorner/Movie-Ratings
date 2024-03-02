@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
+// using Microsoft.AspNetCore.SignalR;
+// using movies.Hubs;
 
 namespace movies.Controllers;
 
