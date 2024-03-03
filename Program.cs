@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
+using Microsoft.AspNetCore.SignalR;
+using movies.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +39,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSignalR();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -46,7 +50,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
-
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
