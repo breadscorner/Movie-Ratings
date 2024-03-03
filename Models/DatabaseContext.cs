@@ -9,7 +9,7 @@ public class DatabaseContext : DbContext
     }
 
     public DbSet<MovieList> MovieLists { get; set; }
-    public DbSet<Likes> Likes { get; set; } // Add this DbSet for Likes entity
+    public DbSet<Likes> Likes { get; set; } 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

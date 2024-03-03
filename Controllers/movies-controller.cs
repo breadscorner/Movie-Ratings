@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using movies.Models;
-// using Microsoft.AspNetCore.SignalR;
-// using movies.Hubs;
+using Microsoft.AspNetCore.SignalR;
+using movies.Hubs;
 
 namespace movies.Controllers;
 
@@ -11,10 +11,12 @@ namespace movies.Controllers;
 public class MoviesController : ControllerBase
 {
   private readonly DatabaseContext _context;
+  private readonly IHubContext<MovieHub> _hubContext;
 
-  public MoviesController(DatabaseContext context)
+  public MoviesController(DatabaseContext context, IHubContext<MovieHub> hubContext)
   {
     _context = context;
+    _hubContext = hubContext;
   }
 
   [HttpGet]

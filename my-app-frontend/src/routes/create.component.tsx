@@ -11,6 +11,7 @@ type Movie = {
 };
 
 export const component = function Home() {
+  
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState(0);
   const [year, setYear] = useState(0);
