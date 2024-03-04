@@ -10,7 +10,12 @@ export default defineConfig({
         target: "http://localhost:5181/",
         changeOrigin: true,
       },
+      "/r": {
+        target: "http://localhost:5181/",
+        ws: true,
+      },
     },
   },
+  
   plugins: [react(), TanStackRouterVite()],
 });

@@ -1,21 +1,21 @@
 using Microsoft.EntityFrameworkCore;
+using movies.Models;
 
-namespace movies.Models
+public class DatabaseContext : DbContext
 {
-  public class DatabaseContext : DbContext
-  {
-     public DatabaseContext(DbContextOptions<DatabaseContext> options)
+    public DatabaseContext(DbContextOptions<DatabaseContext> options)
         : base(options)
     {
     }
 
-    public DbSet<MovieList> MovieLists => Set<MovieList>();
+    public DbSet<MovieList> MovieLists { get; set; }
+    public DbSet<Likes> Likes { get; set; } 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.Entity<MovieList>()
-          .Property(e => e.CreatedAt)
-          .HasDefaultValueSql("now()");
+        modelBuilder.Entity<MovieList>()
+            .Property(e => e.CreatedAt)
+            .HasDefaultValueSql("now()");
     }
-  }
 }
+
