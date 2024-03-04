@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import useSignalR from "../useSignalR";
 import { fetchMovies } from "../network";
-import { useEffect } from "react";
 
 type Movie = {
   id: number;
@@ -12,14 +12,13 @@ type Movie = {
 };
 
 export const component = function CreatePage() {
-
   const { connection } = useSignalR("/r/MovieHub");
 
-
-  useEffect (() => {
+  useEffect(() => {
     if (connection) {
       connection.on("MovieAdded", (movie: Movie) => {
         console.log("MovieAdded", movie);
+        // Handle the received movie data here
       });
     }
   }, [connection]);
@@ -31,26 +30,35 @@ export const component = function CreatePage() {
       fetch(`/api/movies/${id}`, {
         method: "DELETE",
       })
-      .then(response => {
-        if (response.ok) {
-          // Remove the deleted movie from the local state or refetch the movie list
-        } else {
-          // Handle deletion error
-        }
-      })
-      .catch(error => {
-        console.error("Error deleting movie:", error);
-      });
+        .then(response => {
+          if (response.ok) {
+            // Remove the deleted movie from the local state or refetch the movie list
+          } else {
+            // Handle deletion error
+          }
+        })
+        .catch(error => {
+          console.error("Error deleting movie:", error);
+        });
     }
   };
-  
 
-
-
-  const { isPending, error, data:movies } = useQuery({
+  const { isPending, error, data: movies } = useQuery({
     queryKey: ["movies"],
     queryFn: fetchMovies,
   });
+
+  useEffect(() => {
+    if (connection) {
+      connection.on("MovieAdded", (movie: Movie) => {
+        console.log("MovieAdded", movie);      });
+    }
+    return () => {
+      if (connection) {
+        connection.off("MovieAdded");
+      }
+    };
+  }, [connection]);
 
   return (
     <>
