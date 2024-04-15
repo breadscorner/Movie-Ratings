@@ -8,11 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 DotNetEnv.Env.Load();
 
 var PGHOST = Environment.GetEnvironmentVariable("PGHOST");
-if (string.IsNullOrEmpty(PGHOST))
-{
-    throw new Exception("PGHOST environment variable is not set or is empty.");
-}
-
 var PGDATABASE = Environment.GetEnvironmentVariable("PGDATABASE");
 var PGUSER = Environment.GetEnvironmentVariable("PGUSER");
 var PGPASSWORD = Environment.GetEnvironmentVariable("PGPASSWORD");
@@ -53,7 +48,7 @@ app.MapControllers();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.MapGet("/", () => "Hello World!");
+// app.MapGet("/", () => "Hello World!");
 app.MapFallbackToFile("index.html");
 
 app.Run();

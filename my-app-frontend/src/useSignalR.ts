@@ -29,24 +29,24 @@ export default function useSignalR(url: string) {
       .catch((error) => {
         console.log("signal error", error);
       });
-
-    connection.onclose((error) => {
+        
+    connection.onclose(() => {
       if (canceled) {
         return;
       }
       console.log("signal closed");
       setConnection(undefined);
     });
-
-    connection.onreconnecting((error) => {
+      
+    connection.onreconnecting(() => {
       if (canceled) {
         return;
       }
       console.log("signal reconnecting");
       setConnection(undefined);
     });
-
-    connection.onreconnected((error) => {
+      
+    connection.onreconnected(() => {
       if (canceled) {
         return;
       }

@@ -1,5 +1,4 @@
 import { RootRoute, Link, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from '@tanstack/router-devtools'
 
 export const Route = new RootRoute({
   component: () => (
@@ -15,7 +14,6 @@ export const Route = new RootRoute({
       <hr />
       <div className="max-w-xl mx-auto">
         <Outlet />
-        <TanStackRouterDevtools />
       </div>
     </>
   ),

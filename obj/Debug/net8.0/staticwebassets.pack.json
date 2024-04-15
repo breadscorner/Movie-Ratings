@@ -1,12 +1,28 @@
 {
   "Files": [
     {
-      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-4sK4E3Wk.css",
-      "PackagePath": "staticwebassets/assets/index-4sK4E3Wk.css"
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/create-cfVfczdt.css",
+      "PackagePath": "staticwebassets/assets/create-cfVfczdt.css"
     },
     {
-      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-4u6Fy7PY.js",
-      "PackagePath": "staticwebassets/assets/index-4u6Fy7PY.js"
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/create.component-CtQ_Dic3.js",
+      "PackagePath": "staticwebassets/assets/create.component-CtQ_Dic3.js"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-EkVBxJ3Y.js",
+      "PackagePath": "staticwebassets/assets/index-EkVBxJ3Y.js"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index-T74ItOsL.css",
+      "PackagePath": "staticwebassets/assets/index-T74ItOsL.css"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/index.component-Se-IevtU.js",
+      "PackagePath": "staticwebassets/assets/index.component-Se-IevtU.js"
+    },
+    {
+      "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/assets/utils-1RRThafF.js",
+      "PackagePath": "staticwebassets/assets/utils-1RRThafF.js"
     },
     {
       "Id": "/Users/brettgill/Documents/brett-projects/movie-ratings/movies/wwwroot/index.html",
